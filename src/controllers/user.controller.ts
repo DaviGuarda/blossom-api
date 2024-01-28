@@ -6,7 +6,7 @@ import jwt from 'jsonwebtoken'
 import { IUser } from '../types/index'
 
 const getUserToken = (_id: String | Types.ObjectId) => {
-  const authenticatedUserToken = jwt.sign({ _id }, process.env.JWT_SECRET, { expiresIn: "7d" })
+  const authenticatedUserToken = jwt.sign({ _id }, "express", { expiresIn: "7d" })
   return authenticatedUserToken
 }
 
